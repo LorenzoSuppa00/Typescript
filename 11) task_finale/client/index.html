@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/client/styles.css">
+    <title>Lista Utenti</title>
+</head>
+<body>
+    <h1>App per la gestione degli utenti</h1>
+
+    <!-- form per aggiungere gli utenti -->
+    <form id="moduloAggiuntaUtente">
+        <label for="nome">Nome utente:</label>
+        <input type="text" id="nome" required/><br><br>
+
+        <label for="cognome">Cognome utente:</label>
+        <input type="text" id="cognome" required/><br><br>
+
+        <label for="cod_fis">Codice fiscale utente:</label>
+        <input type="text" id="cod_fis" required/><br><br>
+
+        <button type="submit">Aggiungi utente alla lista</button>
+    </form>
+
+    <!-- tabella degli utenti -->
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Cognome</th>
+                <th>Codice fiscale</th>
+            </tr>
+        </thead>
+        <tbody id="contenutoTabella">
+            <!-- qui andranno visualizzati tutti i record presenti nel db -->
+        </tbody>
+    </table>
+</body>
+<script src="/client/fetchAPI.js"></script>
+</html>
